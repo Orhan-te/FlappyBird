@@ -56,8 +56,9 @@ namespace Flappy_Bird
         {
             timer1.Stop();
             label_skor.Text = " Oyun Bitti ! Skorunuz : " + skor;
-            oyunbıtı = true;
-            label1.Visible = true;
+            oyunbıtı = true;        
+            MessageBox.Show("Oyun Bitti ! Tekrardan Başlayacak.");
+            Application.Restart();
             
         }
 
@@ -73,10 +74,7 @@ namespace Flappy_Bird
             {
                 yercekimi = -10;
             }
-            if(oyunbıtı==true && e.KeyCode == Keys.Enter)
-            {
-                Application.Restart(); // oyun biter programı yeniden başlatır
-            }
+           
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
