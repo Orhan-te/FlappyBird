@@ -55,10 +55,11 @@ namespace Flappy_Bird
         public void OyunBıttı() // timer durur ve skor belirir 
         {
             timer1.Stop();
-            label_skor.Text = " Oyun Bitti ! Skorunuz : " + skor;
-            oyunbıtı = true;        
-            MessageBox.Show("Oyun Bitti ! Tekrardan Başlayacak.");
-            Application.Restart();
+         
+            oyunbıtı = true;
+            MessageBox.Show(" Oyun Bitti ! Skorunuz : " + skor);
+            this.Close();
+          
             
         }
 
